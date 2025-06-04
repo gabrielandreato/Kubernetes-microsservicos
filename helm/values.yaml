@@ -8,3 +8,13 @@ gateway:
   replicaCount: 2
   image: brmou204680/java-gateway-k8s:v3
   port: 80
+
+pagamentos:
+  replicaCount: 2
+  image: brmou204680/java-pagamentos-k8s:v3.1
+  port: 40000
+
+pedidos:
+  replicaCount: 2
+  image: brmou204680/java-pedidos-k8s:v3.2
+  port: 40001
