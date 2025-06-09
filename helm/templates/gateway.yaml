@@ -12,6 +12,7 @@ spec:
   template:
     metadata:
       labels:
+        {{- include "alura-foods-app.labels" .| nindent 4}}
         app: gateway
     spec:
       containers:
