@@ -1,0 +1,14 @@
+{{- range $loadBalancer := .Values.loadBalancer}}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{$loadBalancer.name}}
+spec:
+  ports:
+    - port: {{$loadBalancer.port}}
+      targetPort: {{$loadBalancer.port}}
+  selector:
+    app: {{$loadBalancer.appSelector}}
+  type: LoadBalancer
+---
+{{- end}}
